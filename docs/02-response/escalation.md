@@ -4,7 +4,7 @@
 
 Escalation pulls additional authority, context, or technical expertise into an active incident.
 
-Ideally, the on-call engineer gets paged, diagnoses the issue, and fixes it. But during a severe outage, trying to be a hero is an operational liability. You escalate based on time limits and impact, not ego.
+Ideally, the on-call engineer gets paged, diagnoses the issue, and fixes it. During a severe outage, though, trying to be a hero is an operational liability. You escalate based on time limits and impact, not ego.
 
 **When to Escalate Immediately:**
 
@@ -41,11 +41,17 @@ When an SME joins the bridge, the IC pauses, gives a 60-second sitrep (Status, I
 
 ## The Operational Risks of Premature Escalation
 
-Escalating too late prolongs outages. But escalating too early carries its own risks:
+Escalating too late prolongs outages. Escalating too early carries its own risks:
 
 1. **Context Switching**: Paging three different teams in the first five minutes means 10 people jump into a channel demanding context before you even understand the alert. This spikes the primary responder's cognitive load, forcing them to manage people instead of investigating the system.
 2. **Alert Fatigue**: If you hit "page all" every time database CPU hits 80%, SMEs will learn to ignore you. Respect the focus and sleep of other teams.
 3. **Dilution of Ownership**: If a team always escalates to Platform or Core Infra at the first sign of trouble, they never build the operational muscle to debug their own services.
+
+## Escalating for Fatigue and Burnout
+
+There is one exception to the rule of "escalate for domain expertise": Escalating for mental clarity.
+
+If an incident lasts longer than 3-4 hours, or if a primary responder has been paged repeatedly during the night, they must escalate to hand off the incident. Under severe sleep deprivation and stress, engineers suffer from tunnel vision and anchoring bias, leading to critical mistakes. Do not try to be a hero. Page a backup or escalate to a peer solely to swap fresh eyes into the response effort. See `handoffs.md` for proper rotation procedures.
 
 ## How Escalation Interacts with Resolution
 

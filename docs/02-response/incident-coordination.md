@@ -26,6 +26,7 @@ To resolve the chaos, establish an Incident Command System. The core is the Inci
 The IC is the single source of authority. They don't debug code. They don't query the database. The IC orchestrates the response, manages the team's cognitive load, and maintains forward momentum.
 
 **How to Establish Command:**
+
 Command requires an explicit, public declaration. When you join an unmanaged incident channel, your first action is to claim command or ask who holds it.
 
 * *Correct*: "I am assuming the role of Incident Commander. Clear all production actions through me. Who is currently looking at the API logs?"
@@ -33,7 +34,7 @@ Command requires an explicit, public declaration. When you join an unmanaged inc
 
 If the IC needs to step away or handle a technical task, the handoff must be explicit.
 
-* *Handoff*: "I am stepping down as IC to investigate the Redis cluster. Alice, do you accept the role of IC?" Alice must reply, "I accept."
+* *Handoff*: Handoffs must include a brief SitRep (Situation Report). "I am stepping down as IC. Alice, current state: Checkout is down, we are rolling back the DB migration, ETA 5 mins. Do you accept the role of IC?" Alice must reply, "I accept."
 
 If command isn't explicitly handed over, it hasn't transferred.
 
@@ -53,10 +54,16 @@ Once command is established, divide the team into specific, non-overlapping role
 * **Actions**: Investigates logs, writes queries, and executes mitigations approved by the IC.
 * **Rule**: Operations engineers state their intent, wait for IC approval, and report the result. (e.g., "IC, I want to bounce the auth pods to clear the connection pool." / IC: "Approved, proceed and report back.")
 
-### 3. Communications Lead (Scribe / Comm)
+### 3. Communications Lead (Comm)
 
 * **Role**: The shield and translator.
-* **Actions**: Handles external communication. Updates the status page, answers executive questions, and maintains the internal timeline.
+* **Actions**: Handles external communication. Updates the status page and answers executive questions.
 * **Rule**: The Comm Lead intercepts questions from non-responders to protect the IC and Operations team's focus. If the CEO asks, "When will this be fixed?", the Comm Lead answers, not the engineer fixing the database.
+
+### 4. Scribe (Optional but Recommended for SEV1)
+
+* **Role**: The historian.
+* **Actions**: Maintains the internal timeline, records key decisions, and captures relevant links/graphs in the main incident channel.
+* **Rule**: The Scribe does not debug. Their sole job is to ensure the incident timeline is pristine for the Post-Incident Review (PIR). In smaller incidents, the Comm Lead or IC may absorb this role, but in chaotic outages, separating it is crucial.
 
 By enforcing these roles, you turn a panicked mob into a disciplined response unit. You eliminate duplicate work, stop conflicting state changes, and create the space needed to think clearly under pressure.

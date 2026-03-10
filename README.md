@@ -12,11 +12,14 @@ We wrote this for Engineers (SRE, Platform, Backend) and Engineering Managers pa
 
 The doctrine covers specific operational domains during an incident lifecycle:
 
-* **[Overview](overview.md)**: The reality of production incidents. Covers cognitive load, initial alert chaos, and how systems fail before mitigation starts.
-* **[Severity Levels](severity-levels.md)**: Incident classification in practice. Focuses on business impact, misclassification anti-patterns, and the cost of getting it wrong.
-* **[Incident Coordination](incident-coordination.md)**: The structure of incident command. Addresses the risks of decentralized debugging, the bystander effect, and role delegation.
-* **[Communication](communication.md)**: Protocols for maintaining a high signal-to-noise ratio. How to update stakeholders and executives without derailing the engineering effort.
-* **[Escalation](escalation.md)**: Mechanics for pulling additional context and authority into an incident. Covers the risks of escalating too early or too late.
+* **[Overview](docs/01-preparation/overview.md)**: The reality of production incidents. Covers cognitive load, initial alert chaos, and how systems fail before mitigation starts.
+* **[Severity Levels](docs/01-preparation/severity-levels.md)**: Incident classification in practice. Focuses on business impact, misclassification anti-patterns, and the cost of getting it wrong.
+* **[Incident Coordination](docs/02-response/incident-coordination.md)**: The structure of incident command. Addresses the risks of decentralized debugging, the bystander effect, and role delegation.
+* **[Communication](docs/02-response/communication.md)**: Protocols for maintaining a high signal-to-noise ratio. How to update stakeholders and executives without derailing the engineering effort.
+* **[Escalation](docs/02-response/escalation.md)**: Mechanics for pulling additional context and authority into an incident. Covers the risks of escalating too early or too late.
+* **[Runbooks](docs/01-preparation/runbooks.md)**: Doctrine for executing runbooks safely during emergencies and the requirement for continuous maintenance.
+* **[Handoffs](docs/03-resolution/handoffs.md)**: Protocols for managing shift changes and Incident Commander transfers during long-running outages to prevent burnout.
+* **[Postmortems](docs/03-resolution/postmortems.md)**: The Blameless Post-Incident Review (PIR) framework. How to conduct the 5 Whys and generate actionable prevention items.
 
 ## Core Tenets
 
