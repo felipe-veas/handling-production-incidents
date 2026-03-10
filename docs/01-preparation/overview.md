@@ -38,12 +38,12 @@ These modules shift the focus from ad-hoc troubleshooting to structured incident
 
 ## The Incident Lifecycle Diagram
 
-This diagram illustrates the non-negotiable flow of an incident from detection to resolution. Do not deviate from this progression.
+This diagram illustrates the non-negotiable flow of an incident from detection to the final post-incident review (PIR). Do not deviate from this progression.
 
 ```text
-+---------+      +----------------+      +-----------------------+      +---------------+      +------------+
-|         |      |                |      |                       |      |               |      |            |
-|  Pager  | ───> | Initial Triage | ───> | Commander Established | ───> | Communication | ───> | Resolution |
-|         |      |                |      |                       |      |               |      |            |
-+---------+      +----------------+      +-----------------------+      +---------------+      +------------+
++---------+    +----------------+    +-----------------------+    +---------------+    +------------+    +---------------+
+|         |    |                |    |                       |    |               |    |            |    | Post-Incident |
+|  Pager  | ─> | Initial Triage | ─> | Commander Established | ─> | Communication | ─> | Resolution | ─> | Review (PIR)  |
+|         |    |                |    |                       |    |               |    |            |    |               |
++---------+    +----------------+    +-----------------------+    +---------------+    +------------+    +---------------+
 ```

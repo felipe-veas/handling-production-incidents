@@ -12,7 +12,7 @@ Worse is the "stream of consciousness" anti-pattern. Engineers often dump unform
 
 Incident communication requires ruthless filtering. You aren't there to document every thought. You're there to align the team on system state, business impact, and next steps.
 
-Stakeholders and executives don't care that "the Redis maxmemory-policy is set to volatile-lru." That's technical trivia. They care about business impact.
+Stakeholders and executives don't care that the Redis `maxmemory-policy` is set to `volatile-lru`. That's technical trivia. They care about business impact.
 
 Keep updates to the **Status, Impact, Action, ETA** format:
 
@@ -37,6 +37,9 @@ If you make a decision or run a command, put it in the main channel. DMs hide st
 
 **3. Thread the Debugging Context**
 Raw logs, stack traces, and deep technical debates belong in Slack threads. The main channel is for state changes, approvals, and summaries. If someone drops a 100-line stack trace in the main channel, tell them to delete it and move it to a thread.
+
+**4. Use Dedicated "War Rooms"**
+Never manage a high-severity incident in a general team channel (like `#engineering`). Always spin up a dedicated, incident-specific channel (e.g., `#inc-20231024-checkout-down`) and a single corresponding video bridge. This isolates the chaos, allows the Scribe to easily compile the timeline, and ensures that once the incident is resolved, the channel can be archived.
 
 ## Engineering vs. Leadership Context
 
